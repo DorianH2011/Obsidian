@@ -16,13 +16,13 @@ if not fs.exists("/obsidian") then
 end
 
 -- Download Basalt library
-local basaltUrl = "https://raw.githubusercontent.com/Pyroxenium/Basalt/main/basalt.lua"
+local basaltUrl = "https://github.com/Pyroxenium/Basalt/releases/download/v1.7/basalt.lua"
 local basaltPath = "/obsidian/basalt.lua"
 download(basaltUrl, basaltPath)
 
 -- Create main.lua script in /obsidian folder
 local mainScript = [[
-local basalt = require("obsidian.basalt")
+local basalt = require("/obsidian/basalt")
 
 -- Create main frame
 local mainFrame = basalt.createFrame("mainFrame")
